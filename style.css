@@ -1,0 +1,87 @@
+/* --- Reset & Base --- */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background: #f0f4f8; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 50px; transition: background 0.3s, color 0.3s; color: #333; }
+
+/* --- Container --- */
+.todo-container {
+    background: #fff; 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: background 0.3s, color 0.3s;
+}
+h1 { text-align: center; margin-bottom: 20px; }
+
+/* --- Dark Mode --- */
+body.dark-mode { background: #121212; color: #f0f0f0; }
+body.dark-mode .todo-container { background: #1e1e1e; color: #f0f0f0; }
+body.dark-mode input { background: #2c2c2c; color: #f0f0f0; border-color: #555; }
+body.dark-mode li { background: #2c2c2c; color: #f0f0f0; }
+body.dark-mode li.completed { background: #3a3a3a; color: #999; }
+
+/* --- Input & Button --- */
+.input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+.input-group input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+.input-group input:focus { border-color: #007BFF; }
+.input-group button {
+    padding: 10px 20px;
+    background: #007BFF;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.input-group button:hover { background: #0056b3; }
+
+/* --- Mode Toggle --- */
+.mode-toggle { text-align: center; margin-bottom: 15px; }
+.mode-toggle button {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.mode-toggle button:hover { background: #0056b3; }
+
+/* --- Task List --- */
+ul { list-style: none; }
+li {
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s, background 0.3s, color 0.3s;
+}
+li.completed { text-decoration: line-through; color: #999; }
+li:hover { transform: scale(1.02); }
+
+/* --- Buttons inside tasks --- */
+.actions { display: flex; gap: 10px; }
+.actions button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+.delete-btn { color: #ff4d4f; }
+.delete-btn:hover { color: #d9363e; }
+.reminder-btn { color: #007BFF; }
+.reminder-btn:hover { color: #0056b3; }
